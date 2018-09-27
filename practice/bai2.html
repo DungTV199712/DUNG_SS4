@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var numbers = parseInt(prompt("nhập số lượng muốn in ra : "));
+    var count = 0;
+    var N = 2;
+    var i;
+    var flag = true;
+    while (count < numbers) {
+        if (N <= 2) {
+            flag = true;
+        } else if (N % 2 === 0) {
+            flag = false;
+            break;
+        }
+        else {
+ for ( i=3;i < N-1; i+=2){
+     if(N % i === 0){
+         flag=false;
+         break;
+     }
+ }
+        }
+        count++;
+        N++;
+        if (flag = true ) {
+            alert("số nguyên tố từ 1 dến " + numbers + " là : " + count + " và " + N);
+        }
+    }
+
+</script>
+</body>
+</html>
